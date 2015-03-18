@@ -1,0 +1,103 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:id="@+id/lay_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2cc71b">
+        <Button
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:paddingLeft="10dp"
+            android:textColor="#ffffff"
+            android:background="@android:color/transparent"
+            android:textAllCaps="false"
+            android:visibility="invisible" />
+        <TextView
+            android:layout_centerInParent="true"
+            android:id="@+id/tv_RecepientName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:text="username" />
+
+    </RelativeLayout>
+    <ListView
+        android:id="@+id/listMessages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:transcriptMode="alwaysScroll"
+        android:layout_above="@+id/divider"
+        android:layout_below="@+id/lay_header"
+        android:padding="0dip"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:stackFromBottom="true"
+        tools:listitem="@layout/message_left"
+        android:listSelector="@android:color/transparent"/>
+
+    <RelativeLayout
+        android:id="@+id/divider"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#b2b2b2"
+        android:layout_above="@+id/relSendMessage" />
+
+    <RelativeLayout
+        android:id="@+id/relSendMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#f7f7f7"
+        android:paddingLeft="5dp"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+
+        <EditText
+            android:id="@+id/messageBodyField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/message_elipses"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:background="@drawable/chat_send_textview_bg"
+            android:layout_toLeftOf="@+id/sendButton"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:maxLines="1"
+            android:layout_alignParentLeft="true"
+            android:scrollHorizontally="true"
+            android:minHeight="36dp" />
+
+        <Button
+            android:id="@+id/sendButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:text="Send"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:layout_alignBottom="@+id/messageBodyField"
+            android:layout_alignTop="@+id/messageBodyField"
+            android:textSize="16sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="#aaaaaa"
+            android:textAllCaps="false" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="timestamp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="false"
+            android:padding="12dp"
+            android:background="@drawable/grey_bubble"
+            android:id="@+id/relative_layout_message2"
+            android:layout_below="@+id/txtDate"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:layout_alignParentLeft="true"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:id="@+id/txtMessage"
+                android:paddingRight="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="false"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:text="Hello, how are you?"
+                android:layout_alignParentLeft="true"
+                android:paddingLeft="12dp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

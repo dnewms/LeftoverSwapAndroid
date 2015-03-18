@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:id="@+id/lay_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2cc71b">
+        <Button
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/btn_cancelPost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:paddingLeft="10dp"
+            android:textColor="#ffffff"
+            android:background="@android:color/transparent"
+            />
+
+        <Button
+
+            android:layout_alignParentRight="true"
+            android:id="@+id/btn_donePost"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:imeOptions="actionNext"
+            android:text="Post"
+            android:textColor="#ffffff"
+            android:background="@android:color/transparent"
+            />
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lay_header">
+
+        <ImageView
+            android:id="@+id/iv_picture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:scaleType="fitXY" />
+
+        <RelativeLayout
+            android:layout_width="250dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/post_textfield_bg"
+
+
+            android:paddingRight="5dp">
+            <EditText
+                android:id="@+id/editText_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="What is it?"
+                android:textSize="28sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="#A9A9A9"
+                android:background="#00000000"
+                android:inputType="textEmailSubject"
+                android:maxLines="1" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText_description"
+                android:hint="Anything else to add?"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="25dp"
+                android:background="#00000000"
+                android:inputType="textAutoCorrect"
+                android:layout_below="@+id/editText_title"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignLeft="@+id/editText_title"
+                android:layout_alignStart="@+id/editText_title" />
+            <TextView
+                android:id="@+id/tv_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Note: Posts expire after two weeks"
+                android:textSize="10sp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentBottom="true"
+                android:textColor="#696969"/>
+
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+
+</RelativeLayout>
