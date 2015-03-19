@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Leftover Swap</string>
+    <string name="app_name">LeftoverSwap</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_splash">SplashActivity</string>
@@ -20,6 +20,6 @@
     <string name="message_elipses">New Message</string>
     <string name="btn_share">share</string>
     <string name="title_share">Share Post</string>
-    <string name="sharing_msg">Sharing this on Left Over Swap. Any takers?</string>
+    <string name="sharing_msg">Yum! Look what I found on LeftoverSwap!</string>
 
 </resources>

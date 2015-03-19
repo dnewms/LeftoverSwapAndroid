@@ -221,9 +221,9 @@ public class LS_PostInfoActivity extends Activity
 
                 final ResolveInfo info = (ResolveInfo) adapter.getItem(which);
 
-                String caption = postTitle;
-                caption += "\n" + recipientName;
-                final String sharingMsg = caption + "\n" + getString(R.string.sharing_msg);
+                String caption = "";
+                caption += postTitle;
+                final String sharingMsg = getString(R.string.sharing_msg) + " " + caption;
 
                 final Intent intent = new Intent(android.content.Intent.ACTION_SEND);
                 intent.setClassName(info.activityInfo.packageName, info.activityInfo.name);
@@ -278,10 +278,10 @@ public class LS_PostInfoActivity extends Activity
                     protected void onPostExecute(String name) {
                         if(dialog != null) dialog.cancel();
                         if(name != null){
-                            intent.putExtra(Intent.EXTRA_TEXT, sharingMsg + " @ " + name);
+                            intent.putExtra(Intent.EXTRA_TEXT, sharingMsg + " near " + name + ".");
                             if(info.activityInfo.packageName.contains("facebook"))
                             {
-                                intent.putExtra(Intent.EXTRA_TITLE, sharingMsg + " @ " + name);
+                                intent.putExtra(Intent.EXTRA_TITLE, sharingMsg + " near " + name + ".");
                             }
                         }
                         startActivity(intent);
