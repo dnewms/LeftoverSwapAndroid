@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.parse.ParseException;
 import com.parse.ParseObject;
@@ -41,6 +42,8 @@ public class LS_CoversationsFragment extends Fragment implements OnItemClickList
         View view=inflater.inflate(R.layout.fragment_conversations, container, false);
         messagesList = (ListView) view.findViewById(R.id.lv_conversations);
         messagesList.setOnItemClickListener(this);
+        TextView emptyText = (TextView)view.findViewById(android.R.id.empty);
+        messagesList.setEmptyView(emptyText);
 
         return view;
     }

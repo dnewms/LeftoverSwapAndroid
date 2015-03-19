@@ -47,26 +47,36 @@
 
 
                 >
+
                 <TextView
                     android:id="@+id/tv_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:hint="What is it"
-                    android:textSize="28sp"
+                    android:textSize="24sp"
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="10dp"
                     android:textColor="#A9A9A9"
-                    android:background="#00000000"/>
+                    android:background="#00000000"
+                    android:lines="1"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/tv_postedBy"
-                    android:hint="Description:"
+                    android:hint="Posted by and when"
                     android:layout_marginLeft="10dp"
                     android:layout_below="@+id/tv_title"
                     android:background="#00000000"
                     />
-
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_description"
+                    android:hint="description"
+                    android:layout_marginLeft="10dp"
+                    android:background="#00000000"
+                    android:layout_below="@+id/tv_postedBy"
+                    />
 
             </RelativeLayout>
 
@@ -76,7 +86,7 @@
                 android:background="@drawable/login_button_bg"
                 android:layout_gravity="center_horizontal|bottom"
                 android:layout_marginTop="20dp"
-                android:text="Contact"
+                android:text="contact"
                 android:id="@+id/btn_contact"
                 android:textColor="#ffffff"
                 android:gravity="center"
@@ -99,7 +109,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mark as taken"
+                android:text="mark as taken"
                 android:id="@+id/btn_taken"
                 android:layout_below="@+id/lay_center"
 

@@ -43,6 +43,7 @@ public class LS_MeFragment extends Fragment{
     Button btn_feedBack;
     TextView tv_userName;
     ListView lv_posts;
+    TextView emptyText;
     public ParseQueryAdapter postsQueryAdapter;
 
     @Override
@@ -82,8 +83,11 @@ public class LS_MeFragment extends Fragment{
         tv_userName.setText(ParseUser.getCurrentUser().getUsername());
          lv_posts=(ListView)view.findViewById(R.id.lv_myposts);
         btn_feedBack=(Button)view.findViewById(R.id.btn_feedback);
+        emptyText = (TextView)view.findViewById(android.R.id.empty);
+        lv_posts.setEmptyView(emptyText);
 
         return view;
+
     }
 
     @Override
@@ -195,4 +199,6 @@ public class LS_MeFragment extends Fragment{
             lv_posts.setAdapter(postsQueryAdapter);
         }
     }
+
 }
+

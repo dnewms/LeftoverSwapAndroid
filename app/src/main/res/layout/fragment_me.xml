@@ -51,7 +51,14 @@
         android:layout_below="@+id/lay_header"
         android:id="@+id/lv_myposts"
 
-       />
+        />
 
+    <TextView
+        android:id="@android:id/empty"
+        android:text="This will show items you have posted."
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        />
 
 </RelativeLayout>

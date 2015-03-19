@@ -39,5 +39,12 @@
 
         android:layout_below="@+id/relativeLayout" />
 
+    <TextView
+        android:id="@android:id/empty"
+        android:text="This will show any chats that you have."
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        />
 
 </RelativeLayout>

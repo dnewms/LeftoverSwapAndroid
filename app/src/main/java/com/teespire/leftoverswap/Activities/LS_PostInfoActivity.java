@@ -43,6 +43,7 @@ public class LS_PostInfoActivity extends Activity
 {
     private TextView tv_Title;
     private TextView tv_postedBy;
+    private TextView tv_description;
     private Button btn_Contact;
     private Button btn_Cancel;
     private Button btn_Share;
@@ -68,6 +69,7 @@ public class LS_PostInfoActivity extends Activity
         //showSpinner();
         tv_Title=(TextView)findViewById(R.id.tv_title);
         tv_postedBy=(TextView)findViewById(R.id.tv_postedBy);
+        tv_description=(TextView)findViewById(R.id.tv_description);
         picPreview=(ParseImageView)findViewById(R.id.preview_image);
         btn_Contact=(Button)findViewById(R.id.btn_contact);
         btn_Cancel=(Button)findViewById(R.id.btn_cancelPostInfo);
@@ -331,6 +333,7 @@ public class LS_PostInfoActivity extends Activity
             picFile = item.getPhotoFile();
             tv_Title.setText(item.getTitle());
             tv_postedBy.setText("Posted by " + item.getUser().getUsername() + " about " + postTimeAgo);
+            tv_description.setText(item.getDescription());
             picPreview.setParseFile(item.getPhotoFile());
 
             if(item.getUser().getUsername().equals(ParseUser.getCurrentUser().getUsername())){

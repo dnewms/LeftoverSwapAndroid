@@ -97,6 +97,8 @@
             android:paddingRight="10dp"
             android:textColor="#aaaaaa"
             android:textAllCaps="false" />
+
+
     </RelativeLayout>
 
 
